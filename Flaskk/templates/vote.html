@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote</title>
+</head>
+<body>
+    <h2>Welcome, {{ session['username'] }}!</h2>
+    <form method="POST">
+        <p>Who are you supporting today?</p>
+        <button type="submit" name="team" value="RCB">RCB</button>
+        <button type="submit" name="team" value="CSK">CSK</button>
+    </form>
+    <br>
+    <a href="/results">See Results</a> |
+    <a href="/logout">Logout</a>
+</body>
+</html>
