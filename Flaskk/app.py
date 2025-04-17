@@ -6,10 +6,10 @@ app.secret_key = 'your_secret_key'
 
 # MySQL connection
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Venkatamahesh@89",
-    database="voting_app"
+    host=os.environ.get("DB_HOST", "localhost"),
+    user=os.environ.get("DB_USER", "root"),
+    password=os.environ.get("DB_PASSWORD", ""),
+    database=os.environ.get("DB_NAME", "voting_app")
 )
 cursor = db.cursor(dictionary=True)
 print(cursor)
